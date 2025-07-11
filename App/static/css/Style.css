@@ -6,6 +6,13 @@
 
 
 /* Contendor */
+.Logo{
+    height: 50px;
+    width: 50px;
+    margin-top: 25px;
+
+}
+
 .Encabezado{
     height: 80px;
     display: flex;
@@ -46,6 +53,12 @@
     width: 100%;
 }
 
+.Login{
+    height: 35px;
+    width: 35px;
+    margin-top: 22px;
+
+}
 
 .informacion{
     margin-top: 20px;
@@ -186,10 +199,5 @@ img{
     font-size: 15px;
     color: rgb(63, 63, 63);
 }
-
-
-
-
-
 
 

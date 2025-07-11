@@ -6,16 +6,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../static/css/Style.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     
 </head>
 
 <body>
 {% block contenedor %}
         <header class=" Encabezado ">
+            <img src="{% static 'src/Logo.jpg' %}" alt="" class="Logo">
             <nav class="Menu">
                 <a href="{% url 'Nosotros' %}">Nosotros</a>
-                <a href="{% url 'Index' %}">Recetas</a>
+            </nav>
+
+            <nav class="Menu">
+                {% if user.is_authenticated %}
+                <a href="{% url 'logouts' %}" id="contacto_btl">logouts</a>
+                {% else %}
+                <a href="{% url 'login' %}" id="contacto_btl"><img src="{% static 'src/login.png' %}" alt="" class="Login"></a>
+                {% endif %}
             </nav>
         </header>
 
