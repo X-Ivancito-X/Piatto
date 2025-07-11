@@ -18,10 +18,23 @@ from django.contrib import admin
 # 2.1 Importamos include para llamar a otro arhcivo fuera de este
 from django.urls import path, include
 
+# setting
+from django.conf import settings
+# static
+from django.conf.urls.static import static
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     # 2.2 Incluimos el archivo "urls" que viene de "App"
     # 3er PASO crear archivo "urls" en "App" para crear nuestras url
     path('', include ('App.urls')),
+    # Para que ande el inicar sesion y cerrar sesion
+    path('accounts/', include('django.contrib.auth.urls')),
 
 ]
+
+# veirifica q el nombre del archivo esre dentro de la uoicacion
+if settings.DEBUG: 
+    urlpatterns +=static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+

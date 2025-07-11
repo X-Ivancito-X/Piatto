@@ -123,3 +123,15 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# --> OS importamos desde l carpeta media
+import os
+# Indiamos la caerpeta contenedora
+MEDIA_URL= '/Media/'
+# Indicamo la ubicacion d la carpeta contenedora
+MEDIA_ROOT=os.path.join(BASE_DIR,"Media")
+
+
+# COLOAMOS LAS RUTAS
+LOGIN_REDIRECT_URL='/'
+LOGOUT_REDIRECT_URL='/'
