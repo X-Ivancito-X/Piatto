@@ -1,0 +1,84 @@
+{% extends 'Index.html' %}
+{% load static %}
+
+{% block contenedor %}
+<body>
+    
+
+    <header class=" Encabezado ">
+        <nav class="Menu">
+            <a href="{% url 'Nosotros' %}">Nosotros</a>
+            <a href="{% url 'Index' %}">Recetas</a>
+        </nav>
+    </header>
+
+    <main class="">
+        <div class="Arriba">
+            <h2>Disfruta de estas distintas comidas</h2>
+
+            <div class="Fondo">
+                <img src="../../static/src/resto.jpg" alt="">
+            </div>
+        </div>
+        
+        <div class="Tarjetas ">
+            <!-- auto-contenida -->
+
+            <article class="Tarjeta">
+                <img src="../../static/src/risotto-italian-food-png.webp" alt="">
+                <h1>Risotto </h1>
+                <li>1 cucharada de aceite de oliva o mantequilla</li>
+                <li>1 cebolla mediana finamente cortada en cubitos</li>
+                <li>3 cucharadas de queso parmesano recién rallado + extra para servir</li>
+                <li>1½ taza de arroz Arborio</li>
+                <li>4 tazas de caldo pollo o verduras</li>
+                <li>1 cucharada de mantequilla dulce (opcional)</li>
+                
+                
+            
+            </article> 
+            <article class="Tarjeta">
+                <img src="../static/src/lasaña-removebg-preview.png" alt="">
+                <h1>Fideo italiano</h1>
+                <p>Distinctio aliquid asperiores rem laudantium dignissimos optio quo, temporibus deserunt et quas architecto non, ullam veniam aliquam iure alias? Libero, tenetur fugit.</p>
+            
+            </article>
+            <article class="Tarjeta">
+                <img src="../static/src/lasaña-removebg-preview.png" alt="">
+                <h1>Fideo italiano</h1>
+                <p>Distinctio aliquid asperiores rem laudantium dignissimos optio quo, temporibus deserunt et quas architecto non, ullam veniam aliquam iure alias? Libero, tenetur fugit.</p>
+            
+            </article> 
+            
+        </div>
+
+        
+
+        <div class="Tarjetas">
+            <!-- auto-contenida -->
+
+            <article class="Tarjeta">
+                <img src="../static/src/lasaña-removebg-preview.png" alt="">
+                <h1>Fideo italiano</h1>
+                <p>Distinctio aliquid asperiores rem laudantium dignissimos optio quo, temporibus deserunt et quas architecto non, ullam veniam aliquam iure alias? Libero, tenetur fugit.</p>
+            
+            </article>  
+            <article class="Tarjeta">
+                <img src="../static/src/lasaña-removebg-preview.png" alt="">
+                <h1>Fideo italiano</h1>
+                <p>Distinctio aliquid asperiores rem laudantium dignissimos optio quo, temporibus deserunt et quas architecto non, ullam veniam aliquam iure alias? Libero, tenetur fugit.</p>
+            
+            </article>
+            <article class="Tarjeta">
+                <img src="../static/src/lasaña-removebg-preview.png" alt="">
+                <h1>Fideo italiano</h1>
+                <p>Distinctio aliquid asperiores rem laudantium dignissimos optio quo, temporibus deserunt et quas architecto non, ullam veniam aliquam iure alias? Libero, tenetur fugit.</p>
+            
+            </article>
+            
+        </div>
+
+    </main>
+</body>
+
+{% endblock %}

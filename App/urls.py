@@ -7,6 +7,8 @@ urlpatterns = [
     # Ruta + Nombre de la funcion que viene de .views + html
     path('',Inicio,name="Index"),
     path('logouts/',Salir,name='logouts'),
+    path('Nostros/',Nosotros,name="Nosotros"),
+    path('VerMas/',VerMas,name="VerMas"),
 
 ]
 # 4to PASO Creamos las tablas en "models.py"

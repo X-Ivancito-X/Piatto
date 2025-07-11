@@ -9,6 +9,12 @@ from .forms import *
 def Inicio(request):
     # retornamos 
     return render(request,"Index.html")
+def Nosotros(request):
+    # retornamos 
+    return render (request, 'Page/Nosotros.html')
+def VerMas(request):
+    # retornamos 
+    return render (request, 'Page/VerMas.html')
 
 # Funcion para deslogearse
 def Salir(request):
