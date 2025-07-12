@@ -1,0 +1,16 @@
+{% extends 'Index.html' %}
+{% load static %}
+
+{% block contenedor %}
+
+    <form action="" method="post" class="FormularioLogin">
+        <h1>Crear cuenta</h1>
+        {% csrf_token %} 
+        {{formRegistrar}}
+        <input type="submit" value="Registrar">
+
+        <a href="{% url 'login' %}">¿Ya esta registrado? Inicie sesion</a>
+
+    </form>
+
+{% endblock %}

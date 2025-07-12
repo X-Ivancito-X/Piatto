@@ -10,3 +10,8 @@ class VerForm(forms.ModelForm):
         model=Productos
         # fields trae los atributos
         fields='__all__'
+
+class FormRegistrar(forms.ModelForm):
+    class Meta:
+        model=Usuarios
+        fields='__all__'

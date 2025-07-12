@@ -16,6 +16,20 @@ def VerMas(request):
     # retornamos 
     return render (request, 'Page/VerMas.html')
 
+def Registrar(request):
+    data={
+        'formRegistrar':FormRegistrar()
+    }
+    if request.method=='POST':
+        query=FormRegistrar(data=request.POST,files=request.FILES)
+        if  query.is_valid():
+            query.save()
+            data['mensaje']="Datos Registrados"
+        else:
+            data['formRegistrar']=FormRegistrar
+    # retornamos 
+    return render (request, 'Page/CrearCuenta.html', data)
+
 # Funcion para deslogearse
 def Salir(request):
     logout(request)
@@ -46,7 +60,6 @@ def Modificar(request, Cod):
         else:
 
             data['forms']=VerForm
-
     return render(request,'Administrador.html',data)
 
 

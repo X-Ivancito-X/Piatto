@@ -7,6 +7,7 @@ urlpatterns = [
     # Ruta + Nombre de la funcion que viene de .views + html
     path('',Inicio,name="Index"),
     path('logouts/',Salir,name='logouts'),
+    path('CrearCuenta/',Registrar,name="CrearCuenta"),
     path('Nostros/',Nosotros,name="Nosotros"),
     path('VerMas/',VerMas,name="VerMas"),
 
