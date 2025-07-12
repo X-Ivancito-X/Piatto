@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 {% load static %}
 <head>
     <meta charset="UTF-8">
@@ -11,92 +10,89 @@
 </head>
 
 <body>
+    <header class=" Encabezado ">
+        <img src="{% static 'src/Logo.jpg' %}" alt="" class="Logo">
+        <nav class="Menu">
+            <a href="{% url 'Nosotros' %}">Nosotros</a>
+        </nav>
+
+        <nav class="Menu">
+            {% if user.is_authenticated %}
+            <a href="{% url 'logouts' %}" id="contacto_btl">logouts</a>
+            {% else %}
+            <a href="{% url 'login' %}" id="contacto_btl"><img src="{% static 'src/login.png' %}" alt="" class="Login"></a>
+            {% endif %}
+        </nav>
+    </header>
 {% block contenedor %}
-        <header class=" Encabezado ">
-            <img src="{% static 'src/Logo.jpg' %}" alt="" class="Logo">
-            <nav class="Menu">
-                <a href="{% url 'Nosotros' %}">Nosotros</a>
-            </nav>
-
-            <nav class="Menu">
-                {% if user.is_authenticated %}
-                <a href="{% url 'logouts' %}" id="contacto_btl">logouts</a>
-                {% else %}
-                <a href="{% url 'login' %}" id="contacto_btl"><img src="{% static 'src/login.png' %}" alt="" class="Login"></a>
-                {% endif %}
-            </nav>
-        </header>
-
-        <main class="Presentacion">
-            <div class="informacion">
-                <div class="izquierda">
-                    <h1>Ordena tu comda favorita</h1>
-                    <div>
-                        <p>HOLA!, Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus, repudiandae dolorum velit tenetur nemo numquam ullam provident rerum commodi tempora veniam reprehenderit voluptatibus rem modi sapiente magni quidem saepe eos.</p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem pariatur culpa, dolorem possimus libero nulla. Laudantium ipsa ratione voluptate nesciunt adipisci? Aliquid eum sequi sit eligendi tempore aperiam ratione molestiae.</p>
-                    </div>
-                    <div class="boton">
-                        <a href="{% url 'VerMas' %}">Explorar Mas</a>
-
-                    </div>
+    <main class="Presentacion">
+        <div class="informacion">
+            <div class="izquierda">
+                <h1>Ordena tu comda favorita</h1>
+                <div>
+                    <p>HOLA!, Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus, repudiandae dolorum velit tenetur nemo numquam ullam provident rerum commodi tempora veniam reprehenderit voluptatibus rem modi sapiente magni quidem saepe eos.</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem pariatur culpa, dolorem possimus libero nulla. Laudantium ipsa ratione voluptate nesciunt adipisci? Aliquid eum sequi sit eligendi tempore aperiam ratione molestiae.</p>
                 </div>
-                <div class="imagen">
-                    <img src="../static/src/piatto.jpg" alt="">
-                </div>
+                <div class="boton">
+                    <a href="{% url 'VerMas' %}">Explorar Mas</a>
 
+                </div>
+            </div>
+            <div class="imagen">
+                <img src="../static/src/piatto.jpg" alt="">
             </div>
 
-            <div class="Comida">
-                <h2 class="Titulo">Piattos intalianos</h2>
-                <div class="platos">
-                    <!-- auto-contenida -->
-                    <article class="plato">
-                        <img src="../static/src/lasaña-removebg-preview.png" alt="">
-                        <h1>Fideo italiano</h1>
-                        <p>Distinctio aliquid asperiores rem laudantium dignissimos optio quo, temporibus deserunt et quas architecto non, ullam veniam aliquam iure alias? Libero, tenetur fugit.</p>
-                    
-                    </article>  
-                    <article class="plato">
-                        <img src="../static/src/piattto.png" alt="">
-                        <h1>Fideo italiano</h1>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio aliquid asperiores rem laudantium dignissimos optio quo, temporibus deserunt et quas architecto non, ullam veniam aliquam iure alias? Libero, tenetur fugit.</p>
-                        
-                    </article> 
-                    <article class="plato">
-                        <img src="../static/src/piattto.png" alt="">
-                        <h1>Fideo italiano</h1>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio aliquid asperiores rem laudantium dignissimos optio quo, temporibus deserunt et quas architecto non, ullam veniam aliquam iure alias? Libero, tenetur fugit.</p>
-                        
-                    </article> 
-                    <article class="plato">
-                        <img src="../static/src/italiano--removebg-preview.png" alt="">
-                        <h1>Fideo italiano</h1>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio aliquid asperiores rem laudantium dignissimos optio quo, temporibus deserunt et quas architecto non, ullam veniam aliquam iure alias? Libero, tenetur fugit.</p>
-                        
-                    </article> 
+        </div>
 
-
-                </div>
-
+        <div class="Comida">
+            <h2 class="Titulo">Piattos intalianos</h2>
+            <div class="platos">
+                <!-- auto-contenida -->
+                <article class="plato">
+                    <img src="../static/src/lasaña-removebg-preview.png" alt="">
+                    <h1>Fideo italiano</h1>
+                    <p>Distinctio aliquid asperiores rem laudantium dignissimos optio quo, temporibus deserunt et quas architecto non, ullam veniam aliquam iure alias? Libero, tenetur fugit.</p>
                 
+                </article>  
+                <article class="plato">
+                    <img src="../static/src/piattto.png" alt="">
+                    <h1>Fideo italiano</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio aliquid asperiores rem laudantium dignissimos optio quo, temporibus deserunt et quas architecto non, ullam veniam aliquam iure alias? Libero, tenetur fugit.</p>
+                    
+                </article> 
+                <article class="plato">
+                    <img src="../static/src/piattto.png" alt="">
+                    <h1>Fideo italiano</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio aliquid asperiores rem laudantium dignissimos optio quo, temporibus deserunt et quas architecto non, ullam veniam aliquam iure alias? Libero, tenetur fugit.</p>
+                    
+                </article> 
+                <article class="plato">
+                    <img src="../static/src/italiano--removebg-preview.png" alt="">
+                    <h1>Fideo italiano</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio aliquid asperiores rem laudantium dignissimos optio quo, temporibus deserunt et quas architecto non, ullam veniam aliquam iure alias? Libero, tenetur fugit.</p>
+                    
+                </article> 
 
-            <div class="Arriba">
-                <h2>Disfruta de estas distintas comidas</h2>
 
-                <div class="Fondo">
-                    <img src="../static/src/comidaaa.jpg" alt="">
-                </div>
             </div>
-        </main>
 
+            
 
+        <div class="Arriba">
+            <h2>Disfruta de estas distintas comidas</h2>
+
+            <div class="Fondo">
+                <img src="../static/src/comidaaa.jpg" alt="">
+            </div>
+        </div>
+    </main>
 {% endblock %}
-        <footer class="pie">
-            <img src="{% static 'src/Footer/a.png' %}" alt="">
-            <img src="{% static 'src/Footer/b.png' %}" alt="">
-            <img src="{% static 'src/Footer/c.png' %}" alt="">
-            <img src="{% static 'src/Footer/d.png' %}" alt="">
-        </footer>
+    <footer class="pie">
+        <img src="{% static 'src/Footer/a.png' %}" alt="">
+        <img src="{% static 'src/Footer/b.png' %}" alt="">
+        <img src="{% static 'src/Footer/c.png' %}" alt="">
+        <img src="{% static 'src/Footer/d.png' %}" alt="">
+    </footer>
 
         
 </body>
